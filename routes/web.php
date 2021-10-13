@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return "Hello World";
 });
+
+$router->get('/data', function () use ($router) {
+    $results = app('db')->select("SELECT * FROM test");
+    return response()->json($results);
+});
