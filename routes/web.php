@@ -17,10 +17,9 @@ $router->get('/', function () use ($router) {
     return ["Hello Hai..!!!"];
 });
 
-$router->get('/data', function () use ($router) {
-    $results = app('db')->select("SELECT * FROM barang");
-    return response()->json($results);
-});
+//menampilkan data fitnes
+$router->get('/data','ExampleController@getBarber');
+
 
 $router->post('/register', 'UserController@register');
 $router->post('/login','AuthController@login');
