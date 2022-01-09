@@ -21,7 +21,7 @@ $router->get('/', function () use ($router) {
 $router->get('/data','ExampleController@getBarber');
 
 
-$router->get'/dat', function () use ($router){
+$router->get('/dat', function () use ($router){
         $result = DB::select("Select * FROM barber");
     return response()->json($result);
 });
