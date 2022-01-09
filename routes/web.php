@@ -14,7 +14,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return ["Hello Hai..!!!"];
+    return ["Hello Haiiiii..!!!"];
 });
 
 //menampilkan data fitnes
