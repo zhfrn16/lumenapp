@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 //menampilkan data fitnes
-$router->get('/data','ExampleController@getBarber');
+$router->get('/data','Controller@getBarber');
 
 
 $router->get('/dat', function () use ($router){
