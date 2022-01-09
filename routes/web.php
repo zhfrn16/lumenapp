@@ -21,11 +21,6 @@ $router->get('/', function () use ($router) {
 $router->get('/data','Controller@getBarber');
 
 
-$router->get('/dat', function () use ($router){
-        $result = DB::select("Select * FROM barber");
-    return response()->json($result);
-});
-
 
 $router->post('/register', 'UserController@register');
 $router->post('/login','AuthController@login');
