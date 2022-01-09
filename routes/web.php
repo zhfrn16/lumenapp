@@ -21,7 +21,7 @@ $router->get('/', function () use ($router) {
 $router->get('/data','ExampleController@getBarber');
 
 
-$router->post('/postFitnes', function (){
+$router->get('/datas', function (){
         $result = DB::select("Select * FROM barber");
     return response()->json($result);
 });
