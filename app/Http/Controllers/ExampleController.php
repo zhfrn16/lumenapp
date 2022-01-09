@@ -13,6 +13,10 @@ class ExampleController extends Controller
     {
         //
     }
+    public function getBarber(){
+      $results = app('db')->select("SELECT * FROM barber"); 
+    return response()->json($results);
+    }
 
     //
 }
