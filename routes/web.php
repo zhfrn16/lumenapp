@@ -19,6 +19,7 @@ $router->get('/', function () use ($router) {
 
 //menampilkan data baber
 $router->get('/data','Controller@getBarber');
+$router->get('/ambildata','AuthController@ambildata');
 
 
 $router->post('/register', 'UserController@register');
