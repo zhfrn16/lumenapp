@@ -35,6 +35,11 @@ class AuthController extends Controller
 
         return response()->json($user);
     }
+    
+    public function ambildata(){
+        $user = User::all()->first();
+        return response()->json($user);
+    }
 
     public function logout(Request $request){
         $user = \Auth::user();
