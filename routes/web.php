@@ -17,9 +17,8 @@ $router->get('/', function () use ($router) {
     return ["Hello Haiiiii..!!!"];
 });
 
-//menampilkan data fitnes
+//menampilkan data baber
 $router->get('/data','Controller@getBarber');
-
 
 
 $router->post('/register', 'UserController@register');
