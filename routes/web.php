@@ -17,6 +17,11 @@ $router->get('/', function () use ($router) {
     return ["Hello Haiiiii..!!!"];
 });
 
+$router->get('/datauser', function () use ($router) {
+    $results = app('db')->select("SELECT * FROM users");
+    return response()->json($results);
+});
+
 //menampilkan data baber
 $router->get('/data','Controller@getBarber');
 $router->get('/ambildata','AuthController@ambildata');
