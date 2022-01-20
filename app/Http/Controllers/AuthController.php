@@ -10,10 +10,7 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $this->validate($request, [
-            'username' => 'required|username',
-            'password' => 'required|min:6'
-        ]);
+        
 
         $username = $request->input('username');
         $password = $request->input('password');
@@ -23,15 +20,9 @@ class AuthController extends Controller
             return response()->json(['message' => 'Login failed'], 401);
         }
 
-        $isValidPassword = Hash::check($password, $user->password);
-        if (!$isValidPassword) {
-            return response()->json(['message' => 'Login failed'], 401);
-        }
+       
 
-        $generateToken = bin2hex(random_bytes(40));
-        $user->update([
-            'token' => $generateToken
-        ]);
+       
 
         return response()->json($user);
     }
